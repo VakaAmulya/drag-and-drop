@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark Saver</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🔖 Bookmark Saver</h1>
+
+    <!-- Add Bookmark Form -->
+    <form id="bookmarkForm">
+      <input type="text" id="siteName" placeholder="Website Name" required>
+      <input type="url" id="siteURL" placeholder="Website URL (https://...)" required>
+      <button type="submit">Save Bookmark</button>
+    </form>
+
+    <h3>Saved Bookmarks</h3>
+
+    <!-- Search Bar -->
+    <input type="text" id="search" placeholder="Search bookmarks...">
+
+    <!-- Bookmark List -->
+    <ul id="bookmarks"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
