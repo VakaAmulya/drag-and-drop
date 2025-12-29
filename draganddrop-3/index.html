@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag & Drop Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="title">🧩 Drag & Drop Task Board</h1>
+
+  <div class="board">
+
+    <!-- TO DO -->
+    <div class="column">
+      <h2>To Do</h2>
+      <div class="task-list">
+        <div class="task" draggable="true">Learn HTML</div>
+        <div class="task" draggable="true">Learn CSS</div>
+        <div class="task" draggable="true">Understand Flexbox</div>
+        <div class="task" draggable="true">Practice Grid</div>
+        <div class="task" draggable="true">Design Web Page</div>
+      </div>
+    </div>
+
+    <!-- IN PROGRESS -->
+    <div class="column">
+      <h2>In Progress</h2>
+      <div class="task-list">
+        <div class="task" draggable="true">Learn JavaScript</div>
+        <div class="task" draggable="true">DOM Manipulation</div>
+        <div class="task" draggable="true">Mini Projects</div>
+        <div class="task" draggable="true">Problem Solving</div>
+      </div>
+    </div>
+
+    <!-- DONE -->
+    <div class="column">
+      <h2>Done</h2>
+      <div class="task-list">
+        <div class="task" draggable="true">VS Code Setup</div>
+        <div class="task" draggable="true">Git Installed</div>
+        <div class="task" draggable="true">GitHub Account</div>
+        <div class="task" draggable="true">HTML Basics Completed</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
