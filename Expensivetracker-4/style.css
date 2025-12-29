@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container{
+  background: #fff;
+  width: 350px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.balance{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.summary{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.income, .expense{
+  width: 45%;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.income{
+  background: #d4f7dc;
+  color: #2e7d32;
+}
+
+.expense{
+  background: #fddede;
+  color: #c62828;
+}
+
+form input{
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+form button{
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.list{
+  list-style: none;
+  margin-top: 10px;
+}
+
+.list li{
+  background: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  border-right: 5px solid;
+}
+
+.list li.plus{
+  border-color: green;
+}
+
+.list li.minus{
+  border-color: red;
+}
+
+.delete-btn{
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 3px 6px;
+  cursor: pointer;
+}
