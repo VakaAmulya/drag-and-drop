@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnWeb</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* BASIC RESET */
+html{
+  scroll-behavior: smooth;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#f8fafc;
+  color:#0f172a;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;}
+img{
+  max-width:100%;
+  display:block;}
+
+/* NAVBAR*/
+header{
+  background:#ffffff;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:bold;
+  color:#2563eb;
+}
+
+.logo i{font-size:18px;}
+
+.nav-links a{
+  margin:0 14px;
+  font-size:14px;
+  color:#334155;
+}
+
+.nav-actions a{
+  margin-left:16px;
+  font-size:14px;
+}
+
+.btn{
+  background:#2563eb;
+  color:#ffffff;
+  padding:10px 18px;
+  border-radius:6px;
+  display:inline-block;
+}
+
+.btn-outline{
+  background:#ffffff;
+  color:#2563eb;
+  border:1px solid #e2e8f0;
+}
+
+/* ============ HERO ============ */
+section{scroll-margin-top:80px;}
+
+#home{
+  margin:20px auto;
+  max-width:1200px;
+  margin:auto;
+  padding:80px 24px;
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:60px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  background:#e0f2fe;
+  color:#0284c7;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+  margin-bottom:20px;
+}
+
+#home h1{
+  font-size:44px;
+  line-height:1.2;
+  margin-bottom:18px;
+}
+
+#home h1 span{color:#2563eb;}
+
+#home p{
+  color:#64748b;
+  margin-bottom:30px;
+}
+
+.hero-buttons a{margin-right:16px;}
+
+.hero-image{
+  position:relative;
+}
+
+.hero-image img{
+  border-radius:14px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.15);
+}
+
+.certificate{
+  position:absolute;
+  bottom:-20px;
+  left:-20px;
+  background:#ffffff;
+  padding:14px 18px;
+  border-radius:10px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  font-size:13px;
+}
+
+.check{
+  width:22px;
+  height:22px;
+  background:#22c55e;
+  color:#ffffff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ============ FEATURES ============ */
+#features{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 24px;
+  text-align:center;
+}
+
+#features small{
+  color:#2563eb;
+  font-weight:bold;
+}
+
+#features h2{
+  font-size:34px;
+  margin:10px 0 14px;
+}
+
+#features p{
+  color:#64748b;
+  max-width:650px;
+  margin:0 auto 60px;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.feature-card{
+  background:#ffffff;
+  padding:34px 30px;
+  border-radius:16px;
+  border:1px solid #e2e8f0;
+  text-align:left;
+}
+
+.icon{
+  width:46px;
+  height:46px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#ffffff;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+
+.blue{background:#3b82f6;}
+.purple{background:#8b5cf6;}
+.green{background:#22c55e;}
+
+.feature-card ul{
+  list-style:none;
+  margin-top:14px;
+}
+
+.feature-card li{
+  margin-bottom:8px;
+  font-size:14px;
+  color:#475569;
+}
+
+.feature-card li::before{
+  content:"✔";
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:18px;
+  height:18px;
+  margin-right:10px;
+  border-radius:50%;
+  background:#22c55e;
+  color:#ffffff;
+  font-size:12px;
+}
+
+/* ============ STATS ============ */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  margin-top:70px;
+  gap:30px;
+}
+
+.stat h3{
+  color:#2563eb;
+  font-size:30px;
+}
+
+.stat p{color:#64748b;font-size:14px;}
+
+/* ============ TESTIMONIALS ============ */
+#testimonials{
+  border:1px solid rgba(37,99,235,0.15);
+  border-radius:16px;
+  background:rgba(37,99,235,0.03);
+  margin:20px auto;
+  max-width:1200px;
+  margin:auto;
+  padding:80px 24px;
+  text-align:center;
+}
+
+.testimonial-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.testimonial{
+  background:#ffffff;
+  padding:30px;
+  border-radius:16px;
+  border:1px solid #e2e8f0;
+  text-align:left;
+}
+
+.stars{color:#facc15;margin-bottom:12px;}
+
+.author{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.avatar{
+  width:40px;
+  height:40px;
+  background:#cbd5e1;
+  border-radius:50%;
+}
+
+/* ============ CTA ============ */
+.cta{
+  max-width:1200px;
+  margin:80px auto;
+  padding:70px 24px;
+  border-radius:20px;
+  background:linear-gradient(90deg,#3b82f6,#8b5cf6);
+  color:#ffffff;
+  text-align:center;
+}
+
+/* ============ CONTACT ============ */
+#contact{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 24px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+.info{margin-bottom:14px;font-size:14px;}
+
+form{
+  background:#ffffff;
+  padding:34px;
+  border-radius:16px;
+  border:1px solid #e2e8f0;
+}
+
+form label{
+  display:block;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:6px;
+  color:#334155;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:14px;
+  border-radius:6px;
+  border:1px solid #e2e8f0;
+}
+
+button{border:none;width:100%;cursor:pointer;}
+
+/* ============ SOCIAL ICONS (FONT AWESOME) ============ */
+.socials{
+  display:flex;
+  gap:14px;
+  margin-top:10px;
+}
+
+.socials a{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:1px solid #e2e8f0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#2563eb;
+  font-size:16px;
+}
+
+.socials a:hover{
+  background:#2563eb;
+  color:#ffffff;
+}
+
+/* ============ FOOTER ============ */
+footer{
+  background:#020617;
+  color:#cbd5e1;
+  padding:70px 24px 40px;
+}
+
+.footer{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:40px;
+}
+
+footer h4{color:#ffffff;margin-bottom:14px;}
+footer a,footer p{font-size:14px;margin-bottom:8px;display:block;}
+
+.copyright{
+  text-align:center;
+  margin-top:40px;
+  font-size:13px;
+  color:#94a3b8;
+}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:900px){
+  #home{grid-template-columns:1fr;}
+  .feature-grid,.stats,.testimonial-grid,.footer{grid-template-columns:1fr;}
+  #contact{grid-template-columns:1fr;}
+  .certificate{position:static;margin-top:20px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-rocket"></i>
+      LearnWeb
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="#">Sign In</a>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<section id="home">
+  <div>
+    <span class="badge">★ Learn HTML & CSS Today</span>
+    <h1>Master Web<br>Development <span>From<br>Scratch</span></h1>
+    <p>Start your journey into web development with our comprehensive beginner-friendly course. Learn by doing with real-world projects.</p>
+    <div class="hero-buttons">
+      <a href="#" class="btn">Start Learning Free →</a>
+      <a href="#" class="btn btn-outline">▶ Watch Demo</a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80">
+    <div class="certificate">
+      <div class="check">✓</div>
+      <div><strong>Certificate Ready</strong><br>Complete & Get Certified</div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <small>Features</small>
+  <h2>Everything You Need to Learn</h2>
+  <p>Our comprehensive curriculum covers all essential HTML and CSS concepts with hands-on practice</p>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="icon blue">&lt;/&gt;</div>
+      <h3>Interactive Coding</h3>
+      <ul>
+        <li>Live code preview</li>
+        <li>Syntax highlighting</li>
+        <li>Auto-completion</li>
+      </ul>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon purple">📘</div>
+      <h3>Step-by-Step Lessons</h3>
+      <ul>
+        <li>Beginner friendly</li>
+        <li>Video tutorials</li>
+        <li>Quiz assessments</li>
+      </ul>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon green">🖥</div>
+      <h3>Real Projects</h3>
+      <ul>
+        <li>Portfolio websites</li>
+        <li>Landing pages</li>
+        <li>Responsive designs</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><h3>100+</h3><p>Video Lessons</p></div>
+    <div class="stat"><h3>50+</h3><p>Coding Exercises</p></div>
+    <div class="stat"><h3>20+</h3><p>Real Projects</p></div>
+    <div class="stat"><h3>24/7</h3><p>Support Access</p></div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <small style="color: #2563eb;">Testimonials</small>
+  <h2>What Our Students Say</h2>
+  <p>Join thousands of successful students who transformed their careers</p>
+
+  <div class="testimonial-grid">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>“This course changed my life! I built my own websites in just 3 months.”</p>
+      <div class="author"><div class="avatar"></div><div><strong>Sarah Johnson</strong><br><small>Web Developer</small></div></div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>“Hands-on projects helped me understand HTML & CSS deeply.”</p>
+      <div class="author"><div class="avatar"></div><div><strong>Michael Chen</strong><br><small>Freelance Designer</small></div></div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>“Clear explanations, practical examples, excellent support.”</p>
+      <div class="author"><div class="avatar"></div><div><strong>Emily Rodriguez</strong><br><small>UX Designer</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to Start Your Journey?</h2>
+  <p>Join our community of learners and build the skills you need</p>
+  <a href="#" class="btn">Enroll Now – It’s Free →</a>
+</section>
+
+<section id="contact">
+  <div>
+    <small>Contact Us</small>
+    <h2>Get in Touch</h2>
+    <p>Have questions? We’re here to help! Reach out and we’ll respond within 24 hours.</p>
+    <div class="info">📧 <strong>Email Us</strong><br>support@learnweb.com</div>
+    <div class="info">📞 <strong>Call Us</strong><br>+1 (555) 123-4567</div>
+    <div class="info">📍 <strong>Visit Us</strong><br>123 Learning Street, Tech City</div>
+    <div class="info socials">
+  <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+  <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+</div>
+  </div>
+
+  <form>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Enter your full name">
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" placeholder="Enter your email address">
+
+    <label for="subject">Subject</label>
+    <select id="subject">
+      <option value="" disabled selected>Select a subject</option>
+      <option value="general">General Inquiry</option>
+      <option value="courses">Course Details</option>
+      <option value="enrollment">Enrollment</option>
+      <option value="support">Technical Support</option>
+      <option value="feedback">Feedback</option>
+    </select>
+
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="Tell us how we can help..."></textarea>
+
+    <button class="btn"><i class="fa-solid fa-paper-plane" style="margin-right:8px;"></i>Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <div class="footer">
+    <div>
+      <h4><i class="fa-solid fa-rocket" style="margin-right:6px;"></i>LearnWeb</h4>
+      <p>Empowering the next generation of web developers with quality education and hands-on experience.</p>
+      <div class="socials">
+  <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+  <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+</div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <a>Documentation</a>
+      <a>Tutorials</a>
+      <a>Community</a>
+      <a>Support</a>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <p>Subscribe to get the latest updates and news.</p>
+      <input type="email" placeholder="Your email">
+      <a href="#" class="btn">Subscribe</a>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2024 LearnWeb. All rights reserved. | Privacy Policy | Terms of Service | Cookie Policy
+  </div>
+</footer>
+
+</body>
+</html>

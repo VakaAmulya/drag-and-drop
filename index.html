@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaka Amulya | Portfolio</title>
+    <style>
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            background-color: black;
+            padding: 15px 40px;
+            position: sticky;
+            top:0%;
+
+        }
+        .nav-left .name {
+            color:hwb(0 100% 0%);
+            font-size:16px;
+            font-weight: bold;
+            text-decoration: none;
+
+        }
+        .nav-right a{
+            color : #fff;
+            margin-left : 20px;
+            text-decoration: none;
+            font-size:14px;
+        }
+        .nav-right a:hover{
+            color: #00ad00;
+        }
+        .home{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 40px;
+            background: color #f4f4f4;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .home-left h1{
+            font-size:36px;
+            margin-bottom: 10px;
+        }
+        .home-left h1 span{
+            color:#00adb5;
+        }
+        .home-left p{
+            font-size: 16px;
+            margin-bottom: 20px;
+            color:#444;
+        }
+        .home-right{
+            width:40px;
+            text-align: center;
+        }
+        .home-right img{
+            max-width: 100px;
+            width:280px;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+   .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-left,
+  .home-right {
+    width: 100%;
+   }
+ }
+
+    </style>
+
+</head>
+<body>
+   
+<nav class="navbar">
+    <div class="nav-left">
+        <span class="name">Vaka Amulya</span>
+    </div>
+    <div class="nav-right">
+     <a href="#home">Home</a>
+     <a href="#about">About Us</a>
+     <a href="#Projects">Projects</a>
+     <a href="#Skills">Skills</a>
+     <a href="#Contact">Contact</a>
+    </div>
+</nav>
+<section class="home">
+    <div class="home-left">
+        <h1>Hi, I'm<span>Vaka Amulya</span></h1>
+        <h2>ServiceNow Trainee</h2>
+        <p>I am a Computer Science Engineering graduate specialization in IOT.I enjoy building clean, responsive web interface and continuously improving my techincal and communication skills.</p>
+   </div>
+    <div class="home-right">
+        <img src="./img.img/amulya.jpg" alt="profile image">
+    </div>
+</section>
+    
+</body>
+</html>
